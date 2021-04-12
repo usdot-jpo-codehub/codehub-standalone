@@ -1,0 +1,92 @@
+
+/* CSS Document */
+
+#pageContent.codehub .h1wrapper_outer{
+    background: #007D63;
+    height: 50px;
+    margin: inherit;
+}
+
+#pageContent.codehub .h1wrapper_inner{
+    color: #ffffff;
+    background-image: url(20_opacity.svg);
+    background-position: 47px -80px, left top;
+    background-size: cover;
+    width: 100%;
+    z-index: 0;
+    margin: inherit;
+    height: 50px;
+}
+h1#codehub-page-heading{
+    font-size: 25px;
+    letter-spacing: 1.2px;
+    margin: inherit;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    font-weight: bold; 
+}
+
+#pageContent.codehub .codehub-content{
+    padding-left: 10px;
+}
+
+#pageContent.codehub h1,
+#pageContent.codehub h2,
+#pageContent.codehub p {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+#pageContent.codehub h2,
+#pageContent.codehub p,
+#pageContent.codehub p.repository-title{
+    color: #4b5051 !important;
+}
+.left_nav h3 {
+    background-color: #4b5051;
+}
+
+#pageContent.codehub p {
+    font-size: .9rem;
+}
+#pageContent.codehub p.repository-title {
+    font-size: 1rem;
+    font-weight: bolder;
+}
+#pageContent.codehub a{
+    text-decoration: underline;
+}
+
+#pageContent.codehub a.read-more{
+    font-size: smaller;
+}
+
+#research_landing li.leftNavItem {
+    padding: 6px 5px;
+    border-bottom: 1px solid #9ba2a3;
+    margin-right: 0px;
+}
+
+li.leftNavItem.child-menu-item {
+    margin-left: 20px;
+    padding-left: 10px !important;
+}
+li.leftNavItem.child-menu-item.last-menu {
+    margin-bottom: 4px;
+}
+li.leftNavItem.child-menu-item a {
+    font-weight: lighter;
+}
+
+#pageContent.codehub.code-repositories .inner_repos_container {
+    border-top: 1px solid #cfcfcf;
+}
+
+#research_landing ul{
+    margin-right: 8px;
+}
+
+#research-landing .left_nav ul li
+{
+    margin-right: 0px;
+}
