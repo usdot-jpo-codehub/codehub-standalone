@@ -771,6 +771,7 @@
             function (data) {
                 var repoData = '';
                 var maxStringLen = 160;
+                var descriptionString = '';
 
                 // ITERATING THROUGH OBJECTS
                 $.each(data, function (key, value) {
@@ -784,8 +785,19 @@
                     repoData += '<p class="repository-title">' + '<a href= " ' + value.url + 'target="_blank" rel="noopener noreferrer"' + '">' + value.name + '</a>' + '</p>';
 
                     repoData += '<p class="repository-url">' + '<a href= " ' + value.url + 'target="_blank" rel="noopener noreferrer"' + '">' + value.url + '</a>' + '</p>';
+                    
+                    if ((value.description != null) && (value.description.length > maxStringLen)) {
+                        console.log("Length: " + value.description.length + "; value.description 1: " + value.description);
+                        
+                        descriptionString = value.description.substring(0, maxStringLen);
+                        console.log("Length: " + descriptionString.length + ";description string 2: " + descriptionString);
+                        descriptionString = descriptionString.substring(0, Math.min(descriptionString.length, descriptionString.lastIndexOf(" ")));
+                        repoData += '<p class="repository-description">' + descriptionString + '...</p>';
+                    }
+                    else {
+                        repoData += '<p class="repository-description">' + value.description + '</p>';
+                    }
 
-                    repoData += '<p class="repository-description">' + value.description + '</p>';
                     repoData += '</div>'
                     repoData += '</div>'
                     numOfRepos += 1;
