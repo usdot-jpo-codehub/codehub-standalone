@@ -801,7 +801,7 @@
                         descriptionStringLeftovers = " " + value.description.substring(lastSpaceIndex);
 
 
-                        repoData += "<p class='repository-description'>" + descriptionString + "...&nbsp;<a href='code-repositories.html' rel='noopener noreferrer' class='read-more'>READ MORE</a></p>";
+                        repoData += "<p class='repository-description'>" + descriptionString + "<span class='description-second-half' style='display: none;'>" +descriptionStringLeftovers + "</span>...&nbsp;<a href='code-repositories.html' rel='noopener noreferrer' class='read-more'>READ MORE</a></p>";
 
                         repoData += '<p class="repository-description" style="">' + descriptionStringLeftovers + '</p>';
 
