@@ -1,0 +1,245 @@
+
+/* CSS Document */
+
+#pageContent.codehub .h1wrapper_outer{
+    background: #007D63;
+    height: 50px;
+    margin: inherit;
+}
+
+#pageContent.codehub .h1wrapper_inner{
+    color: #ffffff;
+    background-image: url(20_opacity.svg);
+    background-position: 47px -80px, left top;
+    background-size: cover;
+    width: 100%;
+    z-index: 0;
+    margin: inherit;
+    height: 50px;
+}
+h1#codehub-page-heading{
+    font-size: 25px;
+    letter-spacing: 1.2px;
+    margin: inherit;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    font-weight: bold; 
+}
+
+#pageContent.codehub .codehub-content{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#pageContent.codehub h1,
+#pageContent.codehub h2,
+#pageContent.codehub p,
+#pageContent.codehub button,
+#page-left-menu li a {
+    font-family: Roboto, Arial, Helvetica, sans-serif !important;
+}
+
+#\#page-left-menu > li.leftNavItem > a {
+    font-family: Roboto, Arial, Helvetica, sans-serif !important;
+    font-size: 13px;
+}
+
+
+#pageContent.codehub p,
+#pageContent.codehub p.repository-title{
+    color: #4b5051 !important;
+}
+.left_nav h3 {
+    background-color: #4b5051;
+}
+
+#pageContent.codehub p {
+    font-size: .9rem;
+    line-height: 21px;
+}
+#pageContent.codehub p.repository-title {
+    margin-bottom: 0px;
+}
+#pageContent.codehub p.repository-title a{
+    font-size: 18px;
+    font-weight: bolder;
+}
+#pageContent.codehub p.repository-description{
+    margin-top: 12px; 
+}
+
+#pageContent.codehub a{
+    text-decoration: underline;
+    color: #3175a4;
+}
+
+#pageContent.codehub a.read-more{
+    font-size: smaller;
+}
+
+#research_landing li.leftNavItem {
+    padding: 6px 5px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #9ba2a3;
+    margin-right: 0px;
+}
+
+#research_landing li.leftNavItem.child-menu-item {
+    margin-left: 20px;
+    /* padding-left: 10px !important; */
+}
+#research_landing li.leftNavItem.child-menu-item a {
+    padding-left: 10px !important;
+}
+#research_landing li.leftNavItem.child-menu-item.last-menu {
+    margin-bottom: 4px;
+    border-bottom: none;
+}
+#research_landing li.leftNavItem.next-item{
+    border-top: 1px solid #9ba2a3;
+}
+#research_landing li.leftNavItem.child-menu-item a {
+    font-weight: lighter;
+}
+
+#pageContent.codehub.code-repositories .inner_repos_container {
+    border-bottom: 1px solid #cfcfcf;
+}
+#pageContent.codehub.code-repositories .inner_repos_container:last-of-type {
+    border-bottom: none;
+}
+
+#research_landing ul {
+    margin-right: 8px;
+}
+
+#research-landing .left_nav ul li {
+    margin-right: 0px;
+}
+/*.read-more*/
+.repository-url{
+    display: none;
+}
+#codehub-footer {
+    display: inline-block;
+    width: 100%;
+    height: 17px;
+    color: white;
+    background-color: #2b527f;
+    background-color: #113e7e;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#codehub-footer span {
+    padding-left: 12px;
+    padding-right: 12px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#codehub-footer span a {
+    color: white !important;
+}
+
+#pageContent.codehub div.lead-paragraph.bottom-border {
+    margin-left: -10px;
+    margin-right: -10px;
+    border-bottom: 1px solid #CACFD0;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+#research_landing li.leftNavItem.codehub-menu-home,
+#page-left-menu li.leftNavItem.codehub-menu-home{
+    border-bottom: none !important;
+    padding-bottom: 2px !important; 
+}
+
+#pageContent.codehub h2 span.green-text{
+    color: #007D63;
+}
+#pageContent.codehub h2 span.gray-text{
+    color: #4b5051;
+}
+#pageContent.codehub h2{
+    border-bottom: none;
+    line-height: 28px;
+    padding-bottom: 0px;
+    font-size: 21px;
+}
+#pageContent.codehub h2 + p{
+    margin-top: 9px;
+}
+
+.flex-area_row{
+    display: inline-flex;
+}
+
+
+.flex-area_row{
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.flex-area_column{
+    flex-direction: column;
+    
+}
+.flex-area_row .flex-area_column:nth-of-type(1){
+    flex: 10 1 70%;
+    flex: 8 1 65%;
+}
+.flex-area_row .flex-area_column:nth-of-type(2){
+    flex: 4 1 25%; 
+    padding:10px;
+}
+
+.repository-registration-step{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+button#download-repository-form{
+    background-color:#007D63;
+    color: white;
+    border-radius: 4px;
+    padding: 9px 16px;
+    
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    border: 1px solid #4b5051;
+    background-image: linear-gradient(rgb(247, 223, 165), rgb(240, 193, 75));
+    
+    background: #007D63;
+    border-color: #10463b #104238 #0d362d;
+    background: linear-gradient(to bottom,#02a77b,#007D63);
+    box-shadow: 0 1px 0 rgb(255 255 255 / 40%) inset;
+
+    cursor: pointer;
+
+    margin-bottom: 10px;
+
+}
+button#download-repository-form a{
+    color: white;
+}
+
+
+img.download-icon{
+    width: 13px;
+    height: auto;
+    margin-bottom: -2px;
+    margin-left: 3px;
+}
+button#download-repository-form img.download-icon{
+    width: 14px;
+    height: auto;
+    margin-left: 2px;
+    margin-bottom: -2px;
+}
