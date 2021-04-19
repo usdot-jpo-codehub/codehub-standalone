@@ -797,27 +797,15 @@
                     repoData += '<p class="repository-url">' + '<a href= " ' + value.url + 'target="_blank" rel="noopener noreferrer"' + '">' + value.url + '</a>' + '</p>';
                     
                     if ((value.description != null) && (value.description.length > maxStringLen)) {
-                        //console.log("Length: " + value.description.length + "; value.description 1: " + value.description);
-                        
+                       
                         descriptionString = value.description.substring(0, maxStringLen);
                         let lastSpaceIndex = Math.min(descriptionString.length, descriptionString.lastIndexOf(" "));
 
-                        //console.log("Length: " + descriptionString.length + ";description string 2: " + descriptionString);
-
-                        //descriptionString = descriptionString.substring(0, Math.min(descriptionString.length, descriptionString.lastIndexOf(" ")));
                         descriptionString = descriptionString.substring(0, lastSpaceIndex);
-                        //let temp = Math.min(descriptionString.length, descriptionString.lastIndexOf(" ")) + 1;
                         descriptionStringLeftovers = " " + value.description.substring(lastSpaceIndex);
 
 
-                        repoData += "<p id='description-" + numOfRepos + "' class='repository-description'>" + descriptionString + 
-                            "<span class='description-second-half' style='display: none;'>" + descriptionStringLeftovers + "</span><span class='description-ellipsis'>...</span>&nbsp;<a id='" + buttonId + numOfRepos + "' onclick='showFullDescription(" + numOfRepos + ")' rel='noopener noreferrer' class='read-more'>READ MORE</a></p>";
-
-                        repoData += '<p class="repository-description" id="description-secondhalf' + numOfRepos + '">' + descriptionStringLeftovers + '</p>';
-
-                        repoData += '<p class="repository-description" style="">' + descriptionString + descriptionStringLeftovers + '</p>';
-
-                        repoData += '<p class="repository-description" id="description-' + numOfRepos + '">' + descriptionString + '<span id="elipsis-' + numOfRepos + '">' + '...&nbsp;' + '</span>' + '<span id="description-secondhalf-' + numOfRepos + '" style="display: none;">' + descriptionStringLeftovers + '</span>' +'</p>';
+                        repoData += '<p class="repository-description" id="description-' + numOfRepos + '">' + descriptionString + '<span id="elipsis-' + numOfRepos + '">' + '...&nbsp;' + '</span>' + '<span id="description-secondhalf-' + numOfRepos + '" style="display: none;">' + descriptionStringLeftovers + '</span>' +' <button id="button-' + numOfRepos + '" onclick="showFullDescription(' + numOfRepos + ')">READ <span class="read-more">MORE</span><span class="read-less" style="display: none;">LESS</span></button></p>';
 
                     }
                     else {
@@ -836,15 +824,16 @@
     });
 
     function showFullDescription(indexNum){
-        //console.log("Got to show full description" + indexNum);
-        //let description = document.getElementById("description-" + indexNum);
-        
         let descriptionSecondHalfId = "#description-secondhalf-" + indexNum;
         let elipsisId = "#elipsis-" + indexNum;
+        let buttonId = "#button-" + indexNum;
+        let readMore = buttonId + " .read-more";
+        let readLess = buttonId + " .read-less";
 
         $(descriptionSecondHalfId).toggle();
         $(elipsisId).toggle();
-        
+        $(readMore).toggle();
+        $(readLess).toggle();
     }
 </script>
 
