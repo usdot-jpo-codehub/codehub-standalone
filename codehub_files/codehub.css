@@ -3,6 +3,7 @@
 
 #pageContent.codehub .h1wrapper_outer{
     background: #007D63;
+    background: #163B58;
     height: 50px;
     margin: inherit;
 }
@@ -52,6 +53,7 @@ h1#codehub-page-heading{
 }
 .left_nav h3 {
     background-color: #4b5051;
+    background-color: #177594;
 }
 
 #pageContent.codehub p {
@@ -168,6 +170,7 @@ h1#codehub-page-heading{
 
 #pageContent.codehub h2 span.green-text{
     color: #007D63;
+    color: #177594;
 }
 #pageContent.codehub h2 span.gray-text{
     color: #4b5051;
@@ -224,9 +227,9 @@ button#download-repository-form{
     border: 1px solid #4b5051;
     background-image: linear-gradient(rgb(247, 223, 165), rgb(240, 193, 75));
     
-    background: #007D63;
-    border-color: #10463b #104238 #0d362d;
-    background: linear-gradient(to bottom,#02a77b,#007D63);
+    background: #113e7e;
+    border-color: #224b59 #1f4451 #193843;
+    background: linear-gradient(to bottom,#1fa6c1,#113e7e);
     box-shadow: 0 1px 0 rgb(255 255 255 / 40%) inset;
 
     cursor: pointer;
