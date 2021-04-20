@@ -3,6 +3,7 @@
 
 #pageContent.codehub .h1wrapper_outer{
     background: #007D63;
+    background: #163B58;
     height: 50px;
     margin: inherit;
 }
@@ -40,7 +41,7 @@ h1#codehub-page-heading{
     font-family: Roboto, Arial, Helvetica, sans-serif !important;
 }
 
-#\#page-left-menu > li.leftNavItem > a {
+#page-left-menu > li.leftNavItem > a {
     font-family: Roboto, Arial, Helvetica, sans-serif !important;
     font-size: 13px;
 }
@@ -52,6 +53,7 @@ h1#codehub-page-heading{
 }
 .left_nav h3 {
     background-color: #4b5051;
+    background-color: #177594;
 }
 
 #pageContent.codehub p {
@@ -72,10 +74,18 @@ h1#codehub-page-heading{
 #pageContent.codehub a{
     text-decoration: underline;
     color: #3175a4;
+    cursor: pointer;
+}
+#pageContent.codehub a:hover{
+    color: #033c62
 }
 
 #pageContent.codehub a.read-more{
     font-size: smaller;
+}
+
+#pageContent.codehub .external-link-icon{
+    margin-left: 4px;
 }
 
 #research_landing li.leftNavItem {
@@ -143,7 +153,7 @@ h1#codehub-page-heading{
     color: white !important;
 }
 
-#pageContent.codehub div.lead-paragraph.bottom-border {
+#pageContent.codehub .lead-paragraph.bottom-border {
     margin-left: -10px;
     margin-right: -10px;
     border-bottom: 1px solid #CACFD0;
@@ -160,6 +170,7 @@ h1#codehub-page-heading{
 
 #pageContent.codehub h2 span.green-text{
     color: #007D63;
+    color: #177594;
 }
 #pageContent.codehub h2 span.gray-text{
     color: #4b5051;
@@ -206,7 +217,7 @@ button#download-repository-form{
     background-color:#007D63;
     color: white;
     border-radius: 4px;
-    padding: 9px 16px;
+    padding: 9px 0px;
     
     margin-right: auto;
     margin-left: auto;
@@ -216,9 +227,9 @@ button#download-repository-form{
     border: 1px solid #4b5051;
     background-image: linear-gradient(rgb(247, 223, 165), rgb(240, 193, 75));
     
-    background: #007D63;
-    border-color: #10463b #104238 #0d362d;
-    background: linear-gradient(to bottom,#02a77b,#007D63);
+    background: #113e7e;
+    border-color: #224b59 #1f4451 #193843;
+    background: linear-gradient(to bottom,#1fa6c1,#113e7e);
     box-shadow: 0 1px 0 rgb(255 255 255 / 40%) inset;
 
     cursor: pointer;
@@ -227,7 +238,9 @@ button#download-repository-form{
 
 }
 button#download-repository-form a{
-    color: white;
+    color: white !important;
+    padding: 9px 16px;
+    text-decoration: none !important;
 }
 
 
