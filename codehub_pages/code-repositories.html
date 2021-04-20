@@ -612,17 +612,6 @@
                                 <p class="lead-paragraph bottom-border">The following list is a catalog of all source
                                     code repositories discoverable through ITS CodeHub. To open a code repository, click
                                     on one of the links provided below.</p>
-                                <div class="inner_repos_container">
-                                    <p class="repository-title"><a>ATSPM</a></p>
-                                    <p class="repository-url"><a href="https://github.com/OSADP/ATSPM" target='_blank'
-                                            rel='noopener noreferrer'>https://github.com/OSADP/ATSPM</a></p>
-                                    <p class="repository-description">Automated Traffic Signal Performance Measures
-                                        (ATSPM) are a series of visual aids that display the high-resolution data from
-                                        signal controllers. They are a ...
-                                        <a href="code-repositories.html" rel="noopener noreferrer"
-                                            class="read-more">READ MORE</a>
-                                    </p>
-                                </div>
                             </div>
                         </div>
                         <!-- TemplateEndEditable -->
@@ -734,7 +723,7 @@
         let numOfRepos = 0;
         let numOfReposElement = document.getElementById("number-of-repos");
         // FETCHING DATA FROM JSON FILE
-        $.getJSON("../codehub_files/repo-list_strippedDown.json",
+        $.getJSON("../codehub_files/repository_list_codehub.json",
             function (data) {
                 var repoData = '';
                 var maxStringLen = 160;
@@ -753,9 +742,7 @@
                     //repoData += '<hr class="codehub-repo-hr">';
                     //repoData += '<div id="outer_repos_container">';
                     repoData += '<div class="inner_repos_container">';
-                    repoData += '<p class="repository-title">' + '<a href= " ' + value.url + 'target="_blank" rel="noopener noreferrer"' + '">' + value.name + '</a>' + '</p>';
-
-                    repoData += '<p class="repository-url">' + '<a href= " ' + value.url + 'target="_blank" rel="noopener noreferrer"' + '">' + value.url + '</a>' + '</p>';
+                    repoData += '<p class="repository-title">' + '<a href= " ' + value.url + '" target="_blank" rel="noopener noreferrer"' + '">' + value.name + '<img src="../codehub_files/external_link_icon.svg" class="external-link-icon" style=""/></a>' + '</p>';
                     
                     if ((value.description != null) && (value.description.length > maxStringLen)) {
                        
@@ -766,7 +753,7 @@
                         descriptionStringLeftovers = " " + value.description.substring(lastSpaceIndex);
 
 
-                        repoData += '<p class="repository-description" id="description-' + numOfRepos + '">' + descriptionString + '<span id="elipsis-' + numOfRepos + '">' + '...&nbsp;' + '</span>' + '<span id="description-secondhalf-' + numOfRepos + '" style="display: none;">' + descriptionStringLeftovers + '</span>' +' <button id="button-' + numOfRepos + '" onclick="showFullDescription(' + numOfRepos + ')">READ <span class="read-more">MORE</span><span class="read-less" style="display: none;">LESS</span></button></p>';
+                        repoData += '<p class="repository-description" id="description-' + numOfRepos + '">' + descriptionString + '<span id="elipsis-' + numOfRepos + '">' + '...&nbsp;' + '</span>' + '<span id="description-secondhalf-' + numOfRepos + '" style="display: none;">' + descriptionStringLeftovers + '</span>' +' <a id="button-' + numOfRepos + '" onclick="showFullDescription(' + numOfRepos + ')" class="read-more">READ <span class="read-more">MORE</span><span class="read-less" style="display: none;">LESS</span></a></p>';
 
                     }
                     else {
