@@ -72,10 +72,18 @@ h1#codehub-page-heading{
 #pageContent.codehub a{
     text-decoration: underline;
     color: #3175a4;
+    cursor: pointer;
+}
+#pageContent.codehub a:hover{
+    color: #033c62
 }
 
 #pageContent.codehub a.read-more{
     font-size: smaller;
+}
+
+#pageContent.codehub .external-link-icon{
+    margin-left: 4px;
 }
 
 #research_landing li.leftNavItem {
@@ -143,7 +151,7 @@ h1#codehub-page-heading{
     color: white !important;
 }
 
-#pageContent.codehub div.lead-paragraph.bottom-border {
+#pageContent.codehub .lead-paragraph.bottom-border {
     margin-left: -10px;
     margin-right: -10px;
     border-bottom: 1px solid #CACFD0;
