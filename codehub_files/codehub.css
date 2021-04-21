@@ -6,6 +6,12 @@
     background: #163B58;
     height: 50px;
     margin: inherit;
+
+
+    
+}
+#pageContent.codehub.homepage .h1wrapper_outer {
+    height: 88px;
 }
 
 #pageContent.codehub .h1wrapper_inner{
@@ -18,6 +24,11 @@
     margin: inherit;
     height: 50px;
 }
+
+#pageContent.codehub.homepage .h1wrapper_inner{
+    height: 88px;
+}
+
 h1#codehub-page-heading{
     font-size: 25px;
     letter-spacing: 1.2px;
@@ -26,6 +37,17 @@ h1#codehub-page-heading{
     padding-top: 10px;
     padding-bottom: 5px;
     font-weight: bold; 
+
+    /* font-size: 41px;
+    padding-bottom: 20px;
+    padding-top: 19px;
+    letter-spacing: 2.8px; */
+}
+.homepage h1#codehub-page-heading {
+    font-size: 41px;
+    padding-bottom: 20px;
+    padding-top: 19px;
+    letter-spacing: 2.8px;
 }
 
 #pageContent.codehub .codehub-content{
@@ -54,6 +76,7 @@ h1#codehub-page-heading{
 .left_nav h3 {
     background-color: #4b5051;
     background-color: #177594;
+    background-color: #3175a4;
 }
 
 #pageContent.codehub p {
@@ -88,30 +111,34 @@ h1#codehub-page-heading{
     margin-left: 4px;
 }
 
-#research_landing li.leftNavItem {
-    padding: 6px 5px;
+#resources_menu li.leftNavItem {
+    padding: 6px 3px;
     padding-top: 8px;
     padding-bottom: 8px;
     border-bottom: 1px solid #9ba2a3;
     margin-right: 0px;
 }
 
-#research_landing li.leftNavItem.child-menu-item {
+#resources_menu li.leftNavItem.child-menu-item {
     margin-left: 20px;
     /* padding-left: 10px !important; */
 }
-#research_landing li.leftNavItem.child-menu-item a {
-    padding-left: 10px !important;
+#resources_menu li.leftNavItem.child-menu-item a {
+    padding-left: 8px !important;
+    font-weight: lighter;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-left: solid 3px #efefef;
 }
-#research_landing li.leftNavItem.child-menu-item.last-menu {
-    margin-bottom: 4px;
+#resources_menu li.leftNavItem.child-menu-item.last-menu {
+    margin-bottom: 1px;
     border-bottom: none;
 }
-#research_landing li.leftNavItem.next-item{
+#resources_menu li.leftNavItem.next-item{
     border-top: 1px solid #9ba2a3;
 }
-#research_landing li.leftNavItem.child-menu-item a {
-    font-weight: lighter;
+#resources_menu li.leftNavItem.child-menu-item.active a {
+    border-left-color: #3175a4;
 }
 
 #pageContent.codehub.code-repositories .inner_repos_container {
@@ -121,7 +148,7 @@ h1#codehub-page-heading{
     border-bottom: none;
 }
 
-#research_landing ul {
+#resources_menu ul {
     margin-right: 8px;
 }
 
@@ -162,7 +189,7 @@ h1#codehub-page-heading{
     padding-bottom: 10px;
 }
 
-#research_landing li.leftNavItem.codehub-menu-home,
+#resources_menu li.leftNavItem.codehub-menu-home,
 #page-left-menu li.leftNavItem.codehub-menu-home{
     border-bottom: none !important;
     padding-bottom: 2px !important; 
@@ -171,6 +198,8 @@ h1#codehub-page-heading{
 #pageContent.codehub h2 span.green-text{
     color: #007D63;
     color: #177594;
+    color: #121516;
+    color: #3175a4;
 }
 #pageContent.codehub h2 span.gray-text{
     color: #4b5051;
@@ -237,6 +266,19 @@ button#download-repository-form{
     margin-bottom: 10px;
 
 }
+button#download-repository-form:hover,
+button#download-repository-form:focus,
+button#download-repository-form:active {
+    background: #000B4B;
+    border-color: #001826 #00111E #001F2A;
+    background: linear-gradient(to bottom,#1fa6c1,#00738E);
+    background: linear-gradient(to bottom,#00738E,#000B4B);
+    background: linear-gradient(to bottom,#113e7e,#000B4B);
+}
+button#download-repository-form:active {
+    box-shadow: 0 2px 0 rgb(0 0 0) inset;
+}
+
 button#download-repository-form a{
     color: white !important;
     padding: 9px 16px;
@@ -255,4 +297,13 @@ button#download-repository-form img.download-icon{
     height: auto;
     margin-left: 2px;
     margin-bottom: -2px;
+}
+
+p.faqs-question{
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+p.faqs-answer{
+    margin-top: 4px;
+    margin-bottom: 24px;
 }
