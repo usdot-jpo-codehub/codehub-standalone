@@ -1,56 +1,9 @@
 
 /* CSS Document */
 
-#pageContent.codehub .h1wrapper_outer{
-    background: #007D63;
-    background: #163B58;
-    height: 50px;
-    margin: inherit;
 
-
-    
-}
-#pageContent.codehub.homepage .h1wrapper_outer {
-    height: 88px;
-}
-
-#pageContent.codehub .h1wrapper_inner{
-    color: #ffffff;
-    background-image: url(20_opacity.svg);
-    background-position: 47px -80px, left top;
-    background-size: cover;
-    width: 100%;
-    z-index: 0;
-    margin: inherit;
-    height: 50px;
-}
-
-#pageContent.codehub.homepage .h1wrapper_inner{
-    height: 88px;
-}
-
-h1#codehub-page-heading{
-    font-size: 25px;
-    letter-spacing: 1.2px;
-    margin: inherit;
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 5px;
-    font-weight: bold; 
-
-    /* font-size: 41px;
-    padding-bottom: 20px;
-    padding-top: 19px;
-    letter-spacing: 2.8px; */
-}
-.homepage h1#codehub-page-heading {
-    font-size: 41px;
-    padding-bottom: 20px;
-    padding-top: 19px;
-    letter-spacing: 2.8px;
-}
-
-#pageContent.codehub .codehub-content{
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Overall Page styles ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+#pageContent.codehub .codehub-content {
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -68,77 +21,140 @@ h1#codehub-page-heading{
     font-size: 13px;
 }
 
-
-#pageContent.codehub p,
-#pageContent.codehub p.repository-title{
-    color: #4b5051 !important;
-}
-.left_nav h3 {
-    background-color: #4b5051;
-    background-color: #177594;
-    background-color: #3175a4;
-}
-
 #pageContent.codehub p {
     font-size: .9rem;
     line-height: 21px;
 }
-#pageContent.codehub p.repository-title {
-    margin-bottom: 0px;
-}
-#pageContent.codehub p.repository-title a{
-    font-size: 18px;
-    font-weight: bolder;
-}
-#pageContent.codehub p.repository-description{
-    margin-top: 12px; 
-}
 
-#pageContent.codehub a{
+#pageContent.codehub a {
     text-decoration: underline;
-    color: #3175a4;
     cursor: pointer;
 }
-#pageContent.codehub a:hover{
+#pageContent.codehub a:hover {
     color: #033c62
 }
 
-#pageContent.codehub a.read-more{
-    font-size: smaller;
+#pageContent.codehub p,
+#pageContent.codehub h2 span.gray-text {
+    color: #4b5051 !important;
 }
 
-#pageContent.codehub .external-link-icon{
+/* Set uniform blue color = #3175a4 */
+#pageContent.codehub a,
+#pageContent.codehub h2 span.accent-color-text {
+    color: #3175a4;
+}
+.left_nav h3 {
+    background-color: #3175a4;
+}
+#resources_menu li.leftNavItem.child-menu-item.active a {
+    border-left-color: #3175a4;
+}
+
+#pageContent.codehub .external-link-icon {
     margin-left: 4px;
 }
 
-#resources_menu li.leftNavItem {
-    padding: 6px 3px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #9ba2a3;
+#pageContent.codehub .lead-paragraph.bottom-border {
+    margin-left: -10px;
+    margin-right: -10px;
+    border-bottom: 1px solid #CACFD0;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+#pageContent.codehub h2 {
+    line-height: 28px;
+    font-size: 21px;
+    padding-bottom: 0px;
+    border-bottom: none; 
+}
+#pageContent.codehub h2 + p {
+    margin-top: 9px;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Banner styles ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+#pageContent.codehub .h1wrapper_outer {
+    background: #163B58;
+    height: 50px;
+    margin: inherit;
+}
+
+#pageContent.codehub.homepage .h1wrapper_outer {
+    height: 88px;
+}
+
+#pageContent.codehub .h1wrapper_inner {
+    color: #ffffff;
+    background-image: url(20_opacity.svg);
+    background-position: 47px -80px, left top;
+    background-size: cover;
+    width: 100%;
+    z-index: 0;
+    margin: inherit;
+    height: 50px;
+}
+
+#pageContent.codehub.homepage .h1wrapper_inner {
+    height: 88px;
+}
+
+h1#codehub-page-heading {
+    font-size: 25px;
+    font-weight: bold; 
+    letter-spacing: 1.2px;
+    margin: inherit;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+}
+.homepage h1#codehub-page-heading {
+    font-size: 41px;
+    letter-spacing: 2.8px;
+    padding-top: 19px;
+    padding-bottom: 20px;   
+}
+/* ------------------------------ end Banner styles */
+
+
+
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Left Menu styles ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+#resources_menu ul {
+    margin-right: 8px;
+}
+
+#resources_menu .left_nav ul li {
     margin-right: 0px;
+}
+
+#resources_menu li.leftNavItem {
+    padding: 8px 3px;
+    margin-right: 0px;
+    border-bottom: 1px solid #9ba2a3; 
 }
 
 #resources_menu li.leftNavItem.child-menu-item {
     margin-left: 20px;
-    /* padding-left: 10px !important; */
 }
+
 #resources_menu li.leftNavItem.child-menu-item a {
-    padding-left: 8px !important;
     font-weight: lighter;
     padding-top: 4px;
     padding-bottom: 4px;
+    padding-left: 8px !important;
     border-left: solid 3px #efefef;
 }
 #resources_menu li.leftNavItem.child-menu-item.last-menu {
     margin-bottom: 1px;
     border-bottom: none;
 }
-#resources_menu li.leftNavItem.next-item{
+#resources_menu li.leftNavItem.next-item {
     border-top: 1px solid #9ba2a3;
-}
-#resources_menu li.leftNavItem.child-menu-item.active a {
-    border-left-color: #3175a4;
 }
 
 #pageContent.codehub.code-repositories .inner_repos_container {
@@ -148,30 +164,30 @@ h1#codehub-page-heading{
     border-bottom: none;
 }
 
-#resources_menu ul {
-    margin-right: 8px;
+
+
+#resources_menu li.leftNavItem.codehub-menu-home,
+#page-left-menu li.leftNavItem.codehub-menu-home{
+    border-bottom: none !important;
+    padding-bottom: 2px !important; 
 }
 
-#research-landing .left_nav ul li {
-    margin-right: 0px;
-}
-/*.read-more*/
-.repository-url{
-    display: none;
-}
+/* ------------------------------ end Left Menu styles */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ codehub Footer styles ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 #codehub-footer {
     display: inline-block;
     width: 100%;
     height: 17px;
     color: white;
-    background-color: #2b527f;
     background-color: #113e7e;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 #codehub-footer span {
-    padding-left: 12px;
     padding-right: 12px;
+    padding-left: 12px;
     font-weight: bold;
     font-size: 14px;
 }
@@ -180,125 +196,107 @@ h1#codehub-page-heading{
     color: white !important;
 }
 
-#pageContent.codehub .lead-paragraph.bottom-border {
-    margin-left: -10px;
-    margin-right: -10px;
-    border-bottom: 1px solid #CACFD0;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-}
-
-#resources_menu li.leftNavItem.codehub-menu-home,
-#page-left-menu li.leftNavItem.codehub-menu-home{
-    border-bottom: none !important;
-    padding-bottom: 2px !important; 
-}
-
-#pageContent.codehub h2 span.green-text{
-    color: #007D63;
-    color: #177594;
-    color: #121516;
-    color: #3175a4;
-}
-#pageContent.codehub h2 span.gray-text{
-    color: #4b5051;
-}
-#pageContent.codehub h2{
-    border-bottom: none;
-    line-height: 28px;
-    padding-bottom: 0px;
-    font-size: 21px;
-}
-#pageContent.codehub h2 + p{
-    margin-top: 9px;
-}
-
-.flex-area_row{
-    display: inline-flex;
-}
+/* ------------------------------ end Footer styles */
 
 
-.flex-area_row{
-    flex-direction: row;
-    flex-wrap: wrap;
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Code Repositories Page styles ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+#pageContent.codehub p.repository-title {
+    margin-bottom: 0px;
 }
-.flex-area_column{
-    flex-direction: column;
-    
+#pageContent.codehub p.repository-title a {
+    font-size: 18px;
+    font-weight: bolder;
 }
-.flex-area_row .flex-area_column:nth-of-type(1){
-    flex: 10 1 70%;
-    flex: 8 1 65%;
-}
-.flex-area_row .flex-area_column:nth-of-type(2){
-    flex: 4 1 25%; 
-    padding:10px;
+#pageContent.codehub p.repository-description {
+    margin-top: 12px; 
 }
 
-.repository-registration-step{
+#pageContent.codehub a.read-more {
+    font-size: smaller;
+}
+/* ------------------------------ end Code Repositories Page styles */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Repository Registration Page styles ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.repository-registration-step {
     margin-left: auto;
     margin-right: auto;
     display: block;
 }
 
-button#download-repository-form{
-    background-color:#007D63;
+button#download-repository-form {
     color: white;
-    border-radius: 4px;
-    padding: 9px 0px;
-    
-    margin-right: auto;
-    margin-left: auto;
-    display: block;
     font-weight: bold;
     letter-spacing: 0.8px;
-    border: 1px solid #4b5051;
-    background-image: linear-gradient(rgb(247, 223, 165), rgb(240, 193, 75));
-    
-    background: #113e7e;
-    border-color: #224b59 #1f4451 #193843;
-    background: linear-gradient(to bottom,#1fa6c1,#113e7e);
-    box-shadow: 0 1px 0 rgb(255 255 255 / 40%) inset;
-
-    cursor: pointer;
-
     margin-bottom: 10px;
-
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    padding: 9px 0px;
+    border: 1px solid #4b5051;
+    border-color: #224b59 #1f4451 #193843;
+    border-radius: 4px;
+    background: #113e7e;
+    background: -webkit-linear-gradient(top,#1fa6c1,#113e7e);
+    background: linear-gradient(to bottom, #1fa6c1,#113e7e);
+    box-shadow: 0 1px 0 rgb(255 255 255 / 40%) inset;
+    cursor: pointer;
 }
+    
 button#download-repository-form:hover,
 button#download-repository-form:focus,
 button#download-repository-form:active {
-    background: #000B4B;
     border-color: #001826 #00111E #001F2A;
-    background: linear-gradient(to bottom,#1fa6c1,#00738E);
-    background: linear-gradient(to bottom,#00738E,#000B4B);
+    background: #000B4B;
+    background: -webkit-linear-gradient(top,#113e7e,#000B4B);
     background: linear-gradient(to bottom,#113e7e,#000B4B);
 }
 button#download-repository-form:active {
     box-shadow: 0 2px 0 rgb(0 0 0) inset;
 }
 
-button#download-repository-form a{
+button#download-repository-form a {
     color: white !important;
     padding: 9px 16px;
     text-decoration: none !important;
 }
 
+button#download-repository-form img.download-icon {
+    width: 14px;
+    height: auto;
+    margin-bottom: -2px;
+    margin-left: 2px;
+}
 
+.flex-area_row {
+    display: inline-flex;
+}
+.flex-area_row {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.flex-area_column {
+    flex-direction: column;
+    
+}
+.flex-area_row .flex-area_column:nth-of-type(1) {
+    flex: 10 1 70%;
+    flex: 8 1 65%;
+}
+.flex-area_row .flex-area_column:nth-of-type(2) {
+    flex: 4 1 25%; 
+    padding:10px;
+}
 img.download-icon{
     width: 13px;
     height: auto;
     margin-bottom: -2px;
     margin-left: 3px;
 }
-button#download-repository-form img.download-icon{
-    width: 14px;
-    height: auto;
-    margin-left: 2px;
-    margin-bottom: -2px;
-}
 
+/* ------------------------------ end Repository Registration Page styles */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ FAQs Page styles ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 p.faqs-question{
     font-weight: bold;
     margin-bottom: 0px;
@@ -307,3 +305,4 @@ p.faqs-answer{
     margin-top: 4px;
     margin-bottom: 24px;
 }
+/* ------------------------------ end Code Repositories Page styles */

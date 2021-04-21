@@ -626,7 +626,7 @@
                                         href="code-repositories.html" rel="noopener noreferrer">Code Repositories
                                         page</a></p>
                                 
-                                <h2><span class="green-text">Contact Information</span></h2>
+                                <h2><span class="accent-color-text">Contact Information</span></h2>
                                 <p>For more information about ITS CodeHub, please contact the ITS JPO Data Program
                                     Support Team at: <a href="mailto:data.itsjpo@dot.gov">data.itsjpo@dot.gov</a>.</p>
                             </div>
@@ -693,18 +693,4 @@
     </div>
 
 </body>
-<script type="text/javascript">
-
-    var amount = 5;
-    var getTheDiv = document.getElementById("inner_repos_container");
-    var firstRepo = JSON.parse('{"name": "MMITSS_CA_FIELD","url": "https://github.com/OSADP/MMITSS_CA_FIELD","description": "MMITSS_CA_FIELD - Multi-Modal Intelligent Traffic Signal System (MMITSS) is the next generation of traffic signal systems that seeks to provide a comprehensive traffic information framework to service all modes of transportation, including general vehicles, transit, emergency vehicles, freight fleets, and pedestrians and bicyclists in a connected vehicle (CV) environment."}');
-    for (var i = 0; i < amount; i++) {
-        var new_div = document.createElement("div");
-        new_div.innerHTML = "<span style='color: teal;''>test " + i + "Repo Name: " + firstRepo.name + '; ' + firstRepo.url + "; description: ";
-        new_div.className = "hello";
-        getTheDiv.appendChild(new_div);
-
-    }
-</script>
-
 </html>
