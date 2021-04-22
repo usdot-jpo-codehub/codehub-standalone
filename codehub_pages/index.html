@@ -558,7 +558,7 @@
                         JPO Home</a> | <a href="../../resources.htm">Resources</a> | <a href="index.html">ITS
                         CodeHub</a></div>
                 <!-- InstanceEndEditable -->
-                <div id="research_landing">
+                <div id="resources_menu">
                     <div class="left_nav">
                         <h3>
                             Resources
@@ -574,8 +574,8 @@
 
 
                             <li class="leftNavItem codehub-menu-home"><a href="index.html">ITS CodeHub</a></li>
-                            <li class="leftNavItem child-menu-item first-menu"><a href="index.html">Home</a></li>
-                            <li class="leftNavItem child-menu-item active"><a href="code-repositories.html"
+                            <li class="leftNavItem child-menu-item first-menu active"><a href="index.html">Home</a></li>
+                            <li class="leftNavItem child-menu-item"><a href="code-repositories.html"
                                     rel="noopener noreferrer">Code Repositories</a></li>
                             <li class="leftNavItem child-menu-item last-menu"><a
                                     href="repository-registration.html">Repository
@@ -603,16 +603,14 @@
                             <div class="h1wrapper_outer">
                                 <div class="h1wrapper_inner">
                                     <!-- <h1 id="codehub-page-heading">ITS CodeHub</h1> -->
-                                    <h1 id="codehub-page-heading"
-                                    style="display: flex; align-items: center; padding-bottom: 10px;"><img
-                                        style="width: 28px; height: auto; margin-right: 9px;"
-                                        src="../codehub_files/codehub_logo_hompagebanner.svg" />ITS CodeHub</h1>
+                                    <h1 id="codehub-page-heading"><img src="../codehub_files/codehub_logo_hompagebanner.svg" />ITS CodeHub</h1>
                                 </div>
                             </div>
                             <div class="codehub-content">
-                                <p>The U.S. Department of Transportation's portal for open-source, ITS source code.</p>
-                                <p>If you would like to make a source code repository discoverable through ITS CodeHub,
-                                    go to: <a href="repository-registration.html" rel="noopener noreferrer">Repository Registration page</a></p>
+                                <p>The U.S. Department of Transportation&#39;s portal for open-source, ITS source code.</p>
+                                <p>To find all of the source code ITS CodeHub makes discoverable, go to: <a
+                                    href="code-repositories.html" rel="noopener noreferrer">Code Repositories
+                                    page</a></p>
                                 <p>ITS CodeHub is the U.S. Department of Transportation (U.S. DOT) Intelligent
                                     Transportation Systems (ITS) Joint Program Office&#39;s (JPO) resource for the ITS
                                     community to discover open source code, software, and more.</p>
@@ -622,11 +620,10 @@
                                 <p>This approach has the benefits of lowering costs, increasing interoperability and
                                     transparency, and accelerating the path to high-quality software deployment &#151;
                                     collectively advancing our nation&#39;s transportation system.</p>
-                                <p>To find all of the source code ITS CodeHub makes discoverable, go to: <a
-                                        href="code-repositories.html" rel="noopener noreferrer">Code Repositories
-                                        page</a></p>
+                                <p>If you would like to make a source code repository discoverable through ITS CodeHub,
+                                        go to: <a href="repository-registration.html" rel="noopener noreferrer">Repository Registration page</a></p>
                                 
-                                <h2><span class="green-text">Contact Information</span></h2>
+                                <h2><span class="accent-color-text">Contact Information</span></h2>
                                 <p>For more information about ITS CodeHub, please contact the ITS JPO Data Program
                                     Support Team at: <a href="mailto:data.itsjpo@dot.gov">data.itsjpo@dot.gov</a>.</p>
                             </div>
@@ -693,18 +690,4 @@
     </div>
 
 </body>
-<script type="text/javascript">
-
-    var amount = 5;
-    var getTheDiv = document.getElementById("inner_repos_container");
-    var firstRepo = JSON.parse('{"name": "MMITSS_CA_FIELD","url": "https://github.com/OSADP/MMITSS_CA_FIELD","description": "MMITSS_CA_FIELD - Multi-Modal Intelligent Traffic Signal System (MMITSS) is the next generation of traffic signal systems that seeks to provide a comprehensive traffic information framework to service all modes of transportation, including general vehicles, transit, emergency vehicles, freight fleets, and pedestrians and bicyclists in a connected vehicle (CV) environment."}');
-    for (var i = 0; i < amount; i++) {
-        var new_div = document.createElement("div");
-        new_div.innerHTML = "<span style='color: teal;''>test " + i + "Repo Name: " + firstRepo.name + '; ' + firstRepo.url + "; description: ";
-        new_div.className = "hello";
-        getTheDiv.appendChild(new_div);
-
-    }
-</script>
-
 </html>
