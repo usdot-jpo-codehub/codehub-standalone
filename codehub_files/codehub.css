@@ -107,14 +107,23 @@ h1#codehub-page-heading {
     letter-spacing: 1.2px;
     margin: inherit;
     padding-top: 10px;
-    padding-bottom: 5px;
+    
     padding-left: 10px;
+    display: flex; 
+    align-items: center; 
+    padding-bottom: 10px;
 }
+
 .homepage h1#codehub-page-heading {
     font-size: 41px;
     letter-spacing: 2.8px;
     padding-top: 19px;
     padding-bottom: 20px;   
+}
+.homepage h1#codehub-page-heading img {
+    width: 51px; 
+    height: auto; 
+    margin-right: 15px;
 }
 /* ------------------------------ end Banner styles */
 

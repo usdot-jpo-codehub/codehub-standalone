@@ -676,47 +676,6 @@
 
 </body>
 <script type="text/javascript">
-
-
-    /* Notes
-    Load json file as import
-        Access it like an image
-        Clear up text from json - might be ok already from ES
-        Try to escape (html escaping) / text escaping
-          -- there is a method in python that could be used.  Once you read the source information, generate a clean escaped text for json
-*/
-
-    //import nameOfJsonVar from "path to json file"; //NOT DONE. loads data there. can look through file
-    //need to validate it's json and not just text - Do a check
-    //^ if it's json, use it the way it is as a json object. if it's not a json object, use the json parse.
-    //var amount = 5;
-    //var repoDiv = document.getElementById("inner_repos_container");
-    /*create another for loop for each array item*/
-    //var firstRepo = JSON.parse('{"name": "MMITSS_CA_FIELD","url": "https://github.com/OSADP/MMITSS_CA_FIELD","description": "MMITSS_CA_FIELD - Multi-Modal Intelligent Traffic Signal System (MMITSS) is the next generation of traffic signal systems that seeks to provide a comprehensive traffic information framework to service all modes of transportation, including general vehicles, transit, emergency vehicles, freight fleets, and pedestrians and bicyclists in a connected vehicle (CV) environment."}');
-    /*for(var i = 0; i < amount; i++){
-        var new_div = document.createElement("div");
-        new_div.innerHTML = "<p class='repository-title'>" + firstRepo.name + "</p><p class='repository-url'><a target='_blank' rel='noopener noreferrer'>" + firstRepo.url + "</a></p><p class='repository-description'>" + firstRepo.description + "</p>";
-        new_div.className = "repository-wrapper";
-        repoDiv.appendChild(new_div);
-
-    }*/
-
-
-
-    /* Notes
-    Load json file as import
-        Access it like an image
-        Clear up text from json - might be ok already from ES
-        Try to escape (html escaping) / text escaping
-          -- there is a method in python that could be used.  Once you read the source information, generate a clean escaped text for json
-*/
-
-    //NOT DONE. loads data there. can look through file
-    //need to validate it's json and not just text - Do a check
-    //^ if it's json, use it the way it is as a json object. if it's not a json object, use the json parse.
-
-
-
     $(document).ready(function () {
         console.log("working");
         let repoDiv = document.getElementById("outer_repos_container");
@@ -735,26 +694,19 @@
                 // ITERATING THROUGH OBJECTS
                 $.each(data, function (key, value) {
 
-                    //CONSTRUCTION OF ROWS HAVING
-                    // DATA FROM JSON OBJECT
-
+                    //CONSTRUCTION OF ROWS HAVING DATA FROM JSON OBJECT
                     textId = buttonId + numOfRepos;
-                    //repoData += '<hr class="codehub-repo-hr">';
-                    //repoData += '<div id="outer_repos_container">';
                     repoData += '<div class="inner_repos_container">';
-                    repoData += '<p class="repository-title">' + '<a href= " ' + value.url + '" target="_blank" rel="noopener noreferrer"' + '">' + value.name + '<img src="../codehub_files/external_link_icon.svg" class="external-link-icon" style=""/></a>' + '</p>';
+                    repoData += '<p class="repository-title">' + '<a href= " ' + value.url + '" target="_blank" rel="noopener noreferrer"' + '">' + value.name + '<img src="../codehub_files/external_link_icon.svg" class="external-link-icon"/></a>' + '</p>';
                     
                     if ((value.description != null) && (value.description.length > maxStringLen)) {
                        
                         descriptionString = value.description.substring(0, maxStringLen);
                         let lastSpaceIndex = Math.min(descriptionString.length, descriptionString.lastIndexOf(" "));
-
                         descriptionString = descriptionString.substring(0, lastSpaceIndex);
                         descriptionStringLeftovers = " " + value.description.substring(lastSpaceIndex);
 
-
                         repoData += '<p class="repository-description" id="description-' + numOfRepos + '">' + descriptionString + '<span id="elipsis-' + numOfRepos + '">' + '...&nbsp;' + '</span>' + '<span id="description-secondhalf-' + numOfRepos + '" style="display: none;">' + descriptionStringLeftovers + '</span>' +' <a id="button-' + numOfRepos + '" onclick="showFullDescription(' + numOfRepos + ')" class="read-more">READ <span class="read-more">MORE</span><span class="read-less" style="display: none;">LESS</span></a></p>';
-
                     }
                     else {
                         repoData += '<p class="repository-description">' + value.description + '</p>';
