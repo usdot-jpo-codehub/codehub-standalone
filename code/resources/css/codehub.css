@@ -41,14 +41,15 @@
 
 /* Set uniform blue color = #3175a4 */
 #pageContent.codehub a,
-#pageContent.codehub h2 span.accent-color-text {
-    color: #3175a4;
+#pageContent.codehub h2 span.accent-color-text,
+#page-left-menu .leftNavItem a {
+    color: #2e72a1;
 }
 .left_nav h3 {
-    background-color: #3175a4;
+    background-color: #2e72a1;
 }
 #resources_menu li.leftNavItem.child-menu-item.active a {
-    border-left-color: #3175a4;
+    border-left-color: #2e72a1;
 }
 
 #pageContent.codehub .external-link-icon {
