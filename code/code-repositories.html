@@ -26,10 +26,9 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=8" />
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-    <link rel="stylesheet" type="text/css" href="../../css/ITS_JPO.css" media="Screen" />
+    <link rel="stylesheet" type="text/css" href="../css/ITS_JPO.css" media="Screen" />
     <link rel="shortcut icon" href="../../favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="../../cv_basics/css/cv_basics.css" />
-    <link rel="stylesheet" type="text/css" href="../codehub_files/codehub.css" media="Screen" />
+    <link rel="stylesheet" type="text/css" href="./resources/css/codehub.css" />
 
     <script type="text/javascript" src="/js/contentslider.js"></script>
 
@@ -571,68 +570,52 @@
 
                             <li class="leftNavItem"><a href="https://www.pcb.its.dot.gov/eprimer/default.aspx"
                                     target="_blank rel=" noopener noreferrer"">ITS ePrimer</a></li>
-
-
                             <li class="leftNavItem codehub-menu-home"><a href="index.html">ITS CodeHub</a></li>
-                            <li class="leftNavItem child-menu-item first-menu active"><a href="index.html">Home</a></li>
-                            <li class="leftNavItem child-menu-item"><a href="code-repositories.html"
+                            <li class="leftNavItem child-menu-item first-menu"><a href="index.html">Home</a></li>
+                            <li class="leftNavItem child-menu-item active"><a href="code-repositories.html"
                                     rel="noopener noreferrer">Code Repositories</a></li>
-                            <li class="leftNavItem child-menu-item last-menu"><a
-                                    href="repository-registration.html">Repository
+                            <li class="leftNavItem child-menu-item last-menu"><a href="repository-registration.html">Repository
                                     Registration</a></li>
 
-
-                            <li class="leftNavItem next-item"><a href="../../data/index.htm">ITS DataHub</a></li>
+                            <li class="leftNavItem next-item"><a href="../data/index.htm">ITS DataHub</a></li>
                             <li class="leftNavItem"><a href="https://www.itsknowledgeresources.its.dot.gov/"
                                     target="_blank" rel="noopener noreferrer">Knowledge Resources</a></li>
                             <li class="leftNavItem"><a href="https://www.transportation.gov/data/secure" target="_blank"
                                     rel="noopener noreferrer">Secure Data Commons</a></li>
-                            <li class="leftNavItem"><a href="../../resources/scms.htm">Security Credential Management
+                            <li class="leftNavItem"><a href="../resources/scms.htm">Security Credential Management
                                     System (SCMS)</a></li>
-                            <li class="leftNavItem"><a href="../../resources/presentations.htm">Staff Presentations</a>
+                            <li class="leftNavItem"><a href="../resources/presentations.htm">Staff Presentations</a>
                             </li>
                         </ul>
+
+
+
+
                     </div>
 
-                    <div id="pageContent" class="codehub homepage">
+
+
+                    <div id="pageContent" class="codehub code-repositories">
                         <!--start of right side container for sub pages-->
                         <!-- TemplateBeginEditable name="EditRegionBODY" -->
 
                         <div id="printReady">
-
                             <div class="h1wrapper_outer">
                                 <div class="h1wrapper_inner">
-                                    <!-- <h1 id="codehub-page-heading">ITS CodeHub</h1> -->
-                                    <h1 id="codehub-page-heading"><img src="../codehub_files/codehub_logo_hompagebanner.svg" />ITS CodeHub</h1>
+                                    <h1 id="codehub-page-heading"><img src="./resources/images/code_repositories_icon.svg" style="width: 29px; height: auto; margin-bottom: -6px; margin-right: 5px;"/>Total ITS CodeHub Repositories:&nbsp;<span id="number-of-repos">...</span></span></h1>
                                 </div>
                             </div>
-                            <div class="codehub-content">
-                                <p>The U.S. Department of Transportation&#39;s portal for open-source, ITS source code.</p>
-                                <p>To find all of the source code ITS CodeHub makes discoverable, go to: <a
-                                    href="code-repositories.html" rel="noopener noreferrer">Code Repositories
-                                    page</a></p>
-                                <p>ITS CodeHub is the U.S. Department of Transportation (U.S. DOT) Intelligent
-                                    Transportation Systems (ITS) Joint Program Office&#39;s (JPO) resource for the ITS
-                                    community to discover open source code, software, and more.</p>
-                                <p>ITS CodeHub promotes a reuse&#45;first mentality and supports the discovery of open
-                                    source code by putting it directly into the hands of developers to customize,
-                                    transform, expand, and improve, as trends evolve and needs change.</p>
-                                <p>This approach has the benefits of lowering costs, increasing interoperability and
-                                    transparency, and accelerating the path to high-quality software deployment &#151;
-                                    collectively advancing our nation&#39;s transportation system.</p>
-                                <p>If you would like to make a source code repository discoverable through ITS CodeHub,
-                                        go to: <a href="repository-registration.html" rel="noopener noreferrer">Repository Registration page</a></p>
-                                
-                                <h2><span class="accent-color-text">Contact Information</span></h2>
-                                <p>For more information about ITS CodeHub, please contact the ITS JPO Data Program
-                                    Support Team at: <a href="mailto:data.itsjpo@dot.gov">data.itsjpo@dot.gov</a>.</p>
+
+
+                            <div id="outer_repos_container" class="codehub-content">
+                                <p class="lead-paragraph bottom-border">The following list is a catalog of all source
+                                    code repositories discoverable through ITS CodeHub. To open a code repository, click
+                                    on one of the links provided below.</p>
                             </div>
-
-
                         </div>
                         <!-- TemplateEndEditable -->
-                        <!-- End of page content -->
-                    </div>
+
+                    </div> <!-- End of page content -->
                     <div id="codehub-footer">
                         <span id="footer-text">Contact ITS JPO Support Team: <a
                                 href="mailto:data.itsjpo@dot.gov">data.itsjpo@dot.gov</a></span>
@@ -643,6 +626,7 @@
 
                 <!--====== BEGINNING OF FOOTER =========-->
             </div>
+
             <div id="footerBox">
                 <div class="footerblack">
                     <a href="https://www.transportation.gov/administrations/research-and-technology/" target="_blank"
@@ -690,4 +674,66 @@
     </div>
 
 </body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        console.log("working");
+        let repoDiv = document.getElementById("outer_repos_container");
+        let numOfRepos = 0;
+        let numOfReposElement = document.getElementById("number-of-repos");
+        // FETCHING DATA FROM JSON FILE
+        $.getJSON("./resources/data/repository_list_codehub.json",
+            function (data) {
+                var repoData = '';
+                var maxStringLen = 160;
+                var descriptionString = '';
+                var descriptionStringLeftovers = '';
+                var textId = '';
+                let buttonId = 'button-';
+
+                // ITERATING THROUGH OBJECTS
+                $.each(data, function (key, value) {
+
+                    //CONSTRUCTION OF ROWS HAVING DATA FROM JSON OBJECT
+                    textId = buttonId + numOfRepos;
+                    repoData += '<div class="inner_repos_container">';
+                    repoData += '<p class="repository-title">' + '<a href= " ' + value.url + '" target="_blank" rel="noopener noreferrer"' + '">' + value.name + '<img src="./resources/images/external_link_icon.svg" alt="External link icon" class="external-link-icon"/></a>' + '</p>';
+                    
+                    if ((value.description != null) && (value.description.length > maxStringLen)) {
+                       
+                        descriptionString = value.description.substring(0, maxStringLen);
+                        let lastSpaceIndex = Math.min(descriptionString.length, descriptionString.lastIndexOf(" "));
+                        descriptionString = descriptionString.substring(0, lastSpaceIndex);
+                        descriptionStringLeftovers = " " + value.description.substring(lastSpaceIndex);
+
+                        repoData += '<p class="repository-description" id="description-' + numOfRepos + '">' + descriptionString + '<span id="elipsis-' + numOfRepos + '">' + '...&nbsp;' + '</span>' + '<span id="description-secondhalf-' + numOfRepos + '" style="display: none;">' + descriptionStringLeftovers + '</span>' +' <a id="button-' + numOfRepos + '" onclick="showFullDescription(' + numOfRepos + ')" class="read-more">READ <span class="read-more">MORE</span><span class="read-less" style="display: none;">LESS</span></a></p>';
+                    }
+                    else {
+                        repoData += '<p class="repository-description">' + value.description + '</p>';
+                    }
+
+                    repoData += '</div>'
+                    repoData += '</div>'
+                    numOfRepos += 1;
+                });
+
+                //INSERTING ROWS INTO TABLE 
+                numOfReposElement.innerText=numOfRepos;
+                $('#outer_repos_container').append(repoData);
+            });
+    });
+
+    function showFullDescription(indexNum){
+        let descriptionSecondHalfId = "#description-secondhalf-" + indexNum;
+        let elipsisId = "#elipsis-" + indexNum;
+        let buttonId = "#button-" + indexNum;
+        let readMore = buttonId + " .read-more";
+        let readLess = buttonId + " .read-less";
+
+        $(descriptionSecondHalfId).toggle();
+        $(elipsisId).toggle();
+        $(readMore).toggle();
+        $(readLess).toggle();
+    }
+</script>
+
 </html>
