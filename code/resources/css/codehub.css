@@ -88,7 +88,7 @@
 
 #pageContent.codehub .h1wrapper_inner {
     color: #ffffff;
-    background-image: url(20_opacity.svg);
+    background-image: url("../images/20_opacity.svg");
     background-position: 47px -80px, left top;
     background-size: cover;
     width: 100%;
