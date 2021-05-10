@@ -689,18 +689,4 @@ p.faqs-answer{
     </div>
 
 </body>
-<script type="text/javascript">
-
-    var amount = 5;
-    var getTheDiv = document.getElementById("inner_repos_container");
-    var firstRepo = JSON.parse('{"name": "MMITSS_CA_FIELD","url": "https://github.com/OSADP/MMITSS_CA_FIELD","description": "MMITSS_CA_FIELD - Multi-Modal Intelligent Traffic Signal System (MMITSS) is the next generation of traffic signal systems that seeks to provide a comprehensive traffic information framework to service all modes of transportation, including general vehicles, transit, emergency vehicles, freight fleets, and pedestrians and bicyclists in a connected vehicle (CV) environment."}');
-    for (var i = 0; i < amount; i++) {
-        var new_div = document.createElement("div");
-        new_div.innerHTML = "<span style='color: teal;''>test " + i + "Repo Name: " + firstRepo.name + '; ' + firstRepo.url + "; description: ";
-        new_div.className = "hello";
-        getTheDiv.appendChild(new_div);
-
-    }
-</script>
-
 </html>
