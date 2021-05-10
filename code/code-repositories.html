@@ -574,8 +574,9 @@
                             <li class="leftNavItem child-menu-item first-menu"><a href="index.html">Home</a></li>
                             <li class="leftNavItem child-menu-item active"><a href="code-repositories.html"
                                     rel="noopener noreferrer">Code Repositories</a></li>
-                            <li class="leftNavItem child-menu-item last-menu"><a href="repository-registration.html">Repository
-                                    Registration</a></li>
+                            <li class="leftNavItem child-menu-item"><a href="repository-registration.html">Repository
+                                Registration</a></li>
+                            <li class="leftNavItem child-menu-item last-menu"><a href="faqs.html">FAQs</a></li>
 
                             <li class="leftNavItem next-item"><a href="../data/index.htm">ITS DataHub</a></li>
                             <li class="leftNavItem"><a href="https://www.itsknowledgeresources.its.dot.gov/"
@@ -587,10 +588,6 @@
                             <li class="leftNavItem"><a href="../resources/presentations.htm">Staff Presentations</a>
                             </li>
                         </ul>
-
-
-
-
                     </div>
 
                     <main id="pageContent" class="codehub code-repositories" role="main">
@@ -604,11 +601,12 @@
                                 </div>
                             </div>
 
-
                             <div id="outer_repos_container" class="codehub-content" aria-label="Catalog of all ITS CodeHub code repositories.">
                                 <p class="lead-paragraph bottom-border">The following list is a catalog of all source
                                     code repositories discoverable through ITS CodeHub. To open a code repository, click
                                     on one of the links provided below.</p>
+                                <p>Click on a repository category to jump to it.</p>
+                                <ul id="category-jump-links" role="navigation"></ul>
                             </div>
                         </div>
                         <!-- TemplateEndEditable -->
@@ -674,49 +672,78 @@
 </body>
 <script type="text/javascript">
     $(document).ready(function () {
-        console.log("working");
-        let repoDiv = document.getElementById("outer_repos_container");
+        
         let numOfRepos = 0;
         let numOfReposElement = document.getElementById("number-of-repos");
+
         // FETCHING DATA FROM JSON FILE
         $.getJSON("./resources/data/repository_list_codehub.json",
             function (data) {
-                var repoData = '';
-                var maxStringLen = 160;
-                var descriptionString = '';
-                var descriptionStringLeftovers = '';
-                var textId = '';
+                let repoData = '';
+                let repoCategory = '';
+                let maxStringLen = 160;
+                let descriptionString = '';
+                let descriptionStringLeftovers = '';
+                let textId = '';
                 let buttonId = 'button-';
+                let numOfReposInEachCategory = 0;
+                let arrayOfCategories = []; //text, id
+                let categoryId = '';
+                let categoryText = '';
+                let categoriesIndex = 0;
+                let reposIndex = 0;
+                let jumpLinks = '';
 
-                // ITERATING THROUGH OBJECTS
+                // ITERATING THROUGH CATEGORY OBJECTS
                 $.each(data, function (key, value) {
-
-                    //CONSTRUCTION OF ROWS HAVING DATA FROM JSON OBJECT
-                    textId = buttonId + numOfRepos;
-                    repoData += '<div class="inner_repos_container">';
-                    repoData += '<p class="repository-title">' + '<a href= " ' + value.url + '" target="_blank" rel="noopener noreferrer"' + '" title="Click link to navigate to view full repository on version control site.">' + value.name + '<img src="./resources/images/external_link_icon.svg" alt="External link icon" width="13px" height="12px" class="external-link-icon"/></a>' + '</p>';
+                    reposIndex = 0;
+                    categoryText = value.category;
+                    categoryText = categoryText.trim();
+                    categoryId = categoryText.toLowerCase();
+                    categoryId = categoryId.replace(/ +/g, '-');
+                    arrayOfCategories[categoriesIndex] = [categoryText, categoryId];
+                    jumpLinks = '<li class="category-jump-link"><a href="#'+arrayOfCategories[categoriesIndex][1]+'">' + arrayOfCategories[categoriesIndex][0] + '</a></li>';
+                    repoCategory = '<h2 id="' + arrayOfCategories[categoriesIndex][1] + '" class="category-header">' + arrayOfCategories[categoriesIndex][0] + '</h2>';
                     
-                    if ((value.description != null) && (value.description.length > maxStringLen)) {
-                       
-                        descriptionString = value.description.substring(0, maxStringLen);
-                        let lastSpaceIndex = Math.min(descriptionString.length, descriptionString.lastIndexOf(" "));
-                        descriptionString = descriptionString.substring(0, lastSpaceIndex);
-                        descriptionStringLeftovers = " " + value.description.substring(lastSpaceIndex);
+                    $('#outer_repos_container').append(repoCategory);
+                    repoData = '<div class="category_group">';
+                    numOfReposInEachCategory = 0;
+                    $.each(value.repos, function (key2, reposValue) {
+                        
+                        //CONSTRUCTION OF REPOSITORY ROWS HAVING DATA FROM JSON OBJECT
+                        textId = buttonId + numOfRepos;
+                        repoData += '<div class="individual_repo_container">';
+                        repoData += '<p class="repository-title">' + '<a href= " ' + reposValue.url + '" target="_blank" rel="noopener noreferrer"' + '" title="Click link to navigate to view full repository on version control site.">' + reposValue.name + '<img src="./resources/images/external_link_icon.svg" alt="External link icon" width="13px" height="12px" class="external-link-icon"/></a>' + '</p>';
+                        //console.log("reposvalue.description = " + reposValue.description);
+                        //console.log("reposvalue.length = " + reposValue.description.length);
+                        if ((reposValue.description != null) && (reposValue.description.length > maxStringLen)) {
+                            console.log("in IF");
+                            descriptionString = reposValue.description.substring(0, maxStringLen);
+                            let lastSpaceIndex = Math.min(descriptionString.length, descriptionString.lastIndexOf(" "));
+                            descriptionString = descriptionString.substring(0, lastSpaceIndex);
+                            descriptionStringLeftovers = " " + reposValue.description.substring(lastSpaceIndex);
 
-                        repoData += '<p class="repository-description" id="description-' + numOfRepos + '">' + descriptionString + '<span id="elipsis-' + numOfRepos + '">' + '...&nbsp;' + '</span>' + '<span id="description-secondhalf-' + numOfRepos + '" style="display: none;">' + descriptionStringLeftovers + '</span>' +' <a id="button-' + numOfRepos + '" onclick="showFullDescription(' + numOfRepos + ')" class="read-more">READ <span class="read-more">MORE</span><span class="read-less" style="display: none;">LESS</span></a></p>';
-                    }
-                    else {
-                        repoData += '<p class="repository-description">' + value.description + '</p>';
-                    }
+                            repoData += '<p class="repository-description" id="description-' + numOfRepos + '">' + descriptionString + '<span id="elipsis-' + numOfRepos + '">' + '...&nbsp;' + '</span>' + '<span id="description-secondhalf-' + numOfRepos + '" style="display: none;">' + descriptionStringLeftovers + '</span>' +' <a id="button-' + numOfRepos + '" onclick="showFullDescription(' + numOfRepos + ')" class="read-more">READ <span class="read-more">MORE</span><span class="read-less" style="display: none;">LESS</span></a></p>';
+                        }
+                        else {
+                            console.log("in else");
+                            repoData += '<p class="repository-description">' + reposValue.description + '</p>';
+                        }
 
-                    repoData += '</div>'
-                    repoData += '</div>'
-                    numOfRepos += 1;
+                        repoData += '</div>'
+                        numOfRepos += 1;
+                        reposIndex += 1;
+                        numOfReposInEachCategory += 1;
+                        
+                    });
+                    //console.log("~~~~~end of category. Category name: " + value.category + " has " + numOfReposInEachCategory + " repos.")
+                    //INSERTING ROWS INTO TABLE
+                    repoData += '</div>';
+                    $('#category-jump-links').append(jumpLinks);
+                    $('#outer_repos_container').append(repoData);
+                    categoriesIndex += 1; 
                 });
-
-                //INSERTING ROWS INTO TABLE 
                 numOfReposElement.innerText=numOfRepos;
-                $('#outer_repos_container').append(repoData);
             });
     });
 
