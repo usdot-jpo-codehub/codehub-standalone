@@ -714,29 +714,23 @@
                         textId = buttonId + numOfRepos;
                         repoData += '<div class="individual_repo_container">';
                         repoData += '<p class="repository-title">' + '<a href= " ' + reposValue.url + '" target="_blank" rel="noopener noreferrer"' + '" title="Click link to navigate to view full repository on version control site.">' + reposValue.name + '<img src="./resources/images/external_link_icon.svg" alt="External link icon" width="13px" height="12px" class="external-link-icon"/></a>' + '</p>';
-                        //console.log("reposvalue.description = " + reposValue.description);
-                        //console.log("reposvalue.length = " + reposValue.description.length);
+                     
                         if ((reposValue.description != null) && (reposValue.description.length > maxStringLen)) {
-                            console.log("in IF");
                             descriptionString = reposValue.description.substring(0, maxStringLen);
                             let lastSpaceIndex = Math.min(descriptionString.length, descriptionString.lastIndexOf(" "));
                             descriptionString = descriptionString.substring(0, lastSpaceIndex);
                             descriptionStringLeftovers = " " + reposValue.description.substring(lastSpaceIndex);
-
                             repoData += '<p class="repository-description" id="description-' + numOfRepos + '">' + descriptionString + '<span id="elipsis-' + numOfRepos + '">' + '...&nbsp;' + '</span>' + '<span id="description-secondhalf-' + numOfRepos + '" style="display: none;">' + descriptionStringLeftovers + '</span>' +' <a id="button-' + numOfRepos + '" onclick="showFullDescription(' + numOfRepos + ')" class="read-more">READ <span class="read-more">MORE</span><span class="read-less" style="display: none;">LESS</span></a></p>';
                         }
                         else {
-                            console.log("in else");
                             repoData += '<p class="repository-description">' + reposValue.description + '</p>';
                         }
-
                         repoData += '</div>'
                         numOfRepos += 1;
                         reposIndex += 1;
                         numOfReposInEachCategory += 1;
                         
                     });
-                    //console.log("~~~~~end of category. Category name: " + value.category + " has " + numOfReposInEachCategory + " repos.")
                     //INSERTING ROWS INTO TABLE
                     repoData += '</div>';
                     $('#category-jump-links').append(jumpLinks);
