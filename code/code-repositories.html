@@ -683,7 +683,7 @@
                 let repoCategory = '';
                 let maxStringLen = 160;
                 let descriptionString = '';
-                let descriptionStringLeftovers = '';
+                let descriptionStringSecondHalf = '';
                 let textId = '';
                 let buttonId = 'button-';
                 let numOfReposInEachCategory = 0;
@@ -691,12 +691,10 @@
                 let categoryId = '';
                 let categoryText = '';
                 let categoriesIndex = 0;
-                let reposIndex = 0;
                 let jumpLinks = '';
 
                 // ITERATING THROUGH CATEGORY OBJECTS
                 $.each(data, function (key, value) {
-                    reposIndex = 0;
                     categoryText = value.category;
                     categoryText = categoryText.trim();
                     categoryId = categoryText.toLowerCase();
@@ -709,27 +707,27 @@
                     repoData = '<div class="category_group">';
                     numOfReposInEachCategory = 0;
                     $.each(value.repos, function (key2, reposValue) {
-                        
                         //CONSTRUCTION OF REPOSITORY ROWS HAVING DATA FROM JSON OBJECT
                         textId = buttonId + numOfRepos;
                         repoData += '<div class="individual_repo_container">';
-                        repoData += '<p class="repository-title">' + '<a href= " ' + reposValue.url + '" target="_blank" rel="noopener noreferrer"' + '" title="Click link to navigate to view full repository on version control site.">' + reposValue.name + '<img src="./resources/images/external_link_icon.svg" alt="External link icon" width="13px" height="12px" class="external-link-icon"/></a>' + '</p>';
+                        repoData += '<p class="repository-title">';
+                        repoData += '<a href= " ' + reposValue.url + '" target="_blank" rel="noopener noreferrer" title="Click link to navigate to view full repository on version control site.">' + reposValue.name + '<img src="./resources/images/external_link_icon.svg" alt="External link icon" width="13px" height="12px" class="external-link-icon"/></a>' + '</p>';
                      
                         if ((reposValue.description != null) && (reposValue.description.length > maxStringLen)) {
                             descriptionString = reposValue.description.substring(0, maxStringLen);
                             let lastSpaceIndex = Math.min(descriptionString.length, descriptionString.lastIndexOf(" "));
                             descriptionString = descriptionString.substring(0, lastSpaceIndex);
-                            descriptionStringLeftovers = " " + reposValue.description.substring(lastSpaceIndex);
-                            repoData += '<p class="repository-description" id="description-' + numOfRepos + '">' + descriptionString + '<span id="elipsis-' + numOfRepos + '">' + '...&nbsp;' + '</span>' + '<span id="description-secondhalf-' + numOfRepos + '" style="display: none;">' + descriptionStringLeftovers + '</span>' +' <a id="button-' + numOfRepos + '" onclick="showFullDescription(' + numOfRepos + ')" class="read-more">READ <span class="read-more">MORE</span><span class="read-less" style="display: none;">LESS</span></a></p>';
+                            descriptionStringSecondHalf = " " + reposValue.description.substring(lastSpaceIndex);
+                            repoData += '<p class="repository-description" id="description-' + numOfRepos + '">' + descriptionString;
+                            repoData += '<span id="elipsis-' + numOfRepos + '">' + '...&nbsp;' + '</span>' + '<span id="description-secondhalf-' + numOfRepos + '" style="display: none;" aria-hidden="true">' + descriptionStringSecondHalf + '</span>';
+                            repoData += ' <a id="button-' + numOfRepos + '" onclick="showFullDescription(' + numOfRepos + ')" class="read-more">READ <span class="read-more">MORE</span><span class="read-less" style="display: none;">LESS</span></a></p>';
                         }
                         else {
                             repoData += '<p class="repository-description">' + reposValue.description + '</p>';
                         }
                         repoData += '</div>'
                         numOfRepos += 1;
-                        reposIndex += 1;
                         numOfReposInEachCategory += 1;
-                        
                     });
                     //INSERTING ROWS INTO TABLE
                     repoData += '</div>';
@@ -752,7 +750,14 @@
         $(elipsisId).toggle();
         $(readMore).toggle();
         $(readLess).toggle();
+        if($(descriptionSecondHalfId).attr("aria-hidden") == "true"){
+            $(descriptionSecondHalfId).attr("aria-hidden", "false");
+        }
+        else
+        {
+            $(descriptionSecondHalfId).attr("aria-hidden", "true");
+        }
+        
     }
 </script>
-
 </html>

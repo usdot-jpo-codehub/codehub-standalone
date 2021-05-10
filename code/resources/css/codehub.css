@@ -159,11 +159,12 @@ h1#codehub-page-heading {
     border-top: 1px solid #9ba2a3;
 }
 
-#pageContent.codehub.code-repositories .inner_repos_container {
+#pageContent.codehub.code-repositories .individual_repo_container {
     border-bottom: 1px solid #cfcfcf;
 }
-#pageContent.codehub.code-repositories .inner_repos_container:last-of-type {
+#pageContent.codehub.code-repositories .category_group .individual_repo_container:last-of-type {
     border-bottom: none;
+    padding-bottom: 35px;
 }
 
 #resources_menu li.leftNavItem.codehub-menu-home,
@@ -211,6 +212,37 @@ h1#codehub-page-heading {
 
 #pageContent.codehub a.read-more {
     font-size: smaller;
+}
+
+
+ul#category-jump-links{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 35px;
+    padding-left: 0px;
+}
+#category-jump-links .category-jump-link{
+    font-size: 16px;
+    line-height: 25px;
+}
+
+#outer_repos_container h2.category-header {
+    border-top: 1px solid darkgray;
+    border-bottom: 1px solid darkgray;
+    border-color: #CACFD0;
+    margin-left: -10px;
+    padding-left: 10px;
+    margin-right: -10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+    background-color: #eeefef;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    color: #163b58;
 }
 /* ------------------------------ end Code Repositories Page styles */
 
