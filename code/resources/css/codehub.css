@@ -53,6 +53,9 @@
 #pageContent.codehub .external-link-icon {
     margin-left: 4px;
 }
+#pageContent.codehub .external-link-icon.inline {
+    margin-left: 2px;
+}
 
 #pageContent.codehub .lead-paragraph.bottom-border {
     margin-left: -10px;
@@ -214,7 +217,6 @@ h1#codehub-page-heading {
     font-size: smaller;
 }
 
-
 ul#category-jump-links{
     display: flex;
     flex-direction: column;
@@ -225,9 +227,10 @@ ul#category-jump-links{
     margin-bottom: 35px;
     padding-left: 0px;
 }
-#category-jump-links .category-jump-link{
+#category-jump-links .category-jump-link {
     font-size: 16px;
     line-height: 25px;
+    list-style-type: none;
 }
 
 #outer_repos_container h2.category-header {
@@ -334,3 +337,9 @@ p.faqs-answer{
     margin-bottom: 24px;
 }
 /* ------------------------------ end Code Repositories Page styles */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Additional Resources Page styles ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+#pageContent.codehub.additional-resources h2:first-of-type {
+    padding-top: 2px;
+}
+/* ------------------------------ end Additional Resources Page styles */
