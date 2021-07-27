@@ -9,6 +9,7 @@
 #pageContent.codehub h1,
 #pageContent.codehub h2,
 #pageContent.codehub p,
+#pageContent.codehub li,
 #pageContent.codehub button,
 #page-left-menu li a {
     font-family: Roboto, Arial, Helvetica, sans-serif !important;
@@ -19,7 +20,8 @@
     font-size: 13px;
 }
 
-#pageContent.codehub p {
+#pageContent.codehub p,
+#pageContent.codehub li {
     font-size: .9rem;
     line-height: 21px;
 }
@@ -33,6 +35,7 @@
 }
 
 #pageContent.codehub p,
+#pageContent.codehub li,
 #pageContent.codehub h2 span.gray-text {
     color: #4b5051 !important;
 }
@@ -52,6 +55,7 @@
 
 #pageContent.codehub .external-link-icon {
     margin-left: 4px;
+    margin-bottom: -1px;
 }
 #pageContent.codehub .external-link-icon.inline {
     margin-left: 2px;
@@ -74,6 +78,22 @@
 }
 #pageContent.codehub h2 + p {
     margin-top: 9px;
+}
+
+#pageContent.codehub li {
+    list-style-type: disc;
+}
+
+#pageContent.codehub p.p_reduce-bottom-margin {
+    margin-bottom: 8px;
+}
+#pageContent.codehub p.p_reduce-top-margin {
+    margin-top: 8px;
+}
+
+#pageContent.codehub ul.ul_remove-spacing_above-and-below {
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Banner styles ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -298,6 +318,13 @@ button#download-repository-form img.download-icon {
     width: 14px;
     height: auto;
     margin-bottom: -2px;
+    margin-left: 2px;
+}
+
+#pageContent.codehub h2 img.download-icon{
+    width: 16px;
+    height: auto;
+    margin-bottom: -4px;
     margin-left: 2px;
 }
 
