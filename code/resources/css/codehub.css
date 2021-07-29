@@ -247,7 +247,7 @@ ul#category-jump-links {
     margin-bottom: 35px;
     padding-left: 0px;
 }
-#category-jump-links .category-jump-link {
+#pageContent.codehub #category-jump-links .category-jump-link {
     font-size: 16px;
     line-height: 25px;
     list-style-type: none;
